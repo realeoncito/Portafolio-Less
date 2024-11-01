@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import * as glob from "glob";
 import path, { resolve } from "node:path";
+import htmlPurge from 'vite-plugin-purgecss';
 
 const getHtmlEntries = ()=>{
     return Object.fromEntries(
@@ -22,6 +23,9 @@ export default defineConfig(
             rollupOptions: {
                 input: getHtmlEntries()
             }
-        }
+        },
+        plugins: [
+            htmlPurge({}),
+        ]
     }
 );
