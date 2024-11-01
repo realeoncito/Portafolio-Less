@@ -1,13 +1,182 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./less/main.less" />
+    <script src="./js/main.js"></script>
+    <title>Portafolio - Josue Leon</title>
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <h1>
+                Portafolio
+            </h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="#Biografia">Biografía</a>
+                </li>
+                <li>
+                    <a href="#Educacion">Educación</a>
+                </li>
+                <li>
+                    <a href="#Contacto">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <div class="heroContainer">
+            <section class="heroBanner">
+                <div>
+                    <img src="./res/FotoPortafolio.jpg">
+                </div>
+
+                <div>
+                    <h2>Josué Anibal Leon Alvarado</h2>
+                    <h3>Desarrollador Junior en Genexus</h3>
+                    <h3>Pasante de la Ingeniería en Ciencias de la Computación</h3>
+                </div>
+
+            </section>
+        </div>
+
+        <section class="Section" id="Biografia">
+            <div class="itemSection">
+                <div class="Titulos">
+                    <img src="./res/icons/user-circle-solid.svg" alt="Icono de perfil" />
+                    <div>
+                        <h2>Acerca de mí</h2>
+                    </div>
+                </div>
+            </div>
+
+            <p>
+                ¡Hola! Soy Josue Leon, un estudiante apasionado por la Ingeniería en Ciencias de la Computación
+                con un fuerte interés en el desarrollo de soluciones efectivas y eficientes plasmadas en
+                aplicaciones web y nativas para problemas cotidianos y empresariales.
+            </p>
+
+            <p>
+                A lo largo de mi formación académica, he tenido la oportunidad de trabajar en proyectos colaborativos e
+                individuales que me han permitido aprender y desarrollar habilidades en la creación aplicaciones de
+                escritorio
+                basadas en .NET Framework y .NET Core, administración de bases de datos en SQL, mySQL y Oracle,
+                despliegue de Web Service
+                basados en C# para la comunicación cliente-servidor, desarrollo de aplicaciones móviles con Kotlin y
+                desarrollo de sitios
+                web responsivos utilizándoselo html, css, y javascript .
+            </p>
+
+            <p>
+                Esta experiencia adquirida me permitió optar a una pasantía en la que potencié mis conocimientos y los
+                complementé con el
+                uso de la herramienta Genexus.<br />Actualmente, me encuentro laborando para esta empresa en el
+                desarrollo de core bancarios, corresponsales bancarios y demás servicios del sector financiero.
+            </p>
+
+        </section>
+
+
+        <section class="Section" id="Educacion">
+            <div class="itemSection">
+                <div class="Titulos">
+                    <img src="./res/icons/university-solid.svg" alt="Icono de Educación">
+                    <div>
+                        <h2>Educación</h2>
+                    </div>
+                </div>
+            </div>
+
+            <ul>
+                <li>
+                    <h3>Ingeniería en Ciencias de la Computación</h3>
+                    <p>Universidad Católica de Honduras 2022 - Presente</p>
+                </li>
+
+                <li>
+                    <h3>CCNA1 Introducción a las Redes </h3>
+                    <p>Cisco Netowrking Academy - 2023</p>
+                </li>
+
+                <li>
+                    <h3>CCNA2 Fundamentos de Conmutación, Enrutamiento y Redes Inalámbricas</h3>
+                    <p>Cisco Netowrking Academy - 2024</p>
+                </li>
+
+                <li>
+                    <h3>Bachillerato en Ciencias y Humanidades</h3>
+                    <p>Instituto Dr. Genaro Muñoz Hernández 2020 - 2021</p>
+                </li>
+            </ul>
+
+        </section>
+
+        <section class="Contacto" id="Contacto">
+            <div class="itemSection">
+                <div class="Titulos">
+                    <img src="./res/icons/address-card-solid.svg" alt="Icono de contacto" />
+                    <div>
+                        <h2>Contacto</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="Container">
+                <section class="Contactame">
+                    <p>josueleon1217@gmail.com</p>
+                    <p>+504 8871-8213</p>
+
+                    <form class="formContacto">
+                        <div class="row">
+                            <div class="Formulario">
+                                <label for="telefono">Número de Teléfono:</label>
+                                <input type="text" id="telefono" name="telefono" placeholder="ejemplo: 98635526" />
+                                <div id="errorTelefono" class="error"></div>
+                            </div>
+                            <div class="Formulario">
+                                <label for="correo">Correo Electrónico:</label>
+                                <input type="email" id="correo" name="correo" placeholder="ejemplo@gmail.com" />
+                                <div id="errorCorreo" class="error"></div>
+                            </div>
+                        </div>
+                        <div class="Formulario">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" maxlength="30" />
+                            <div id="errorNombre" class="error"></div>
+                        </div>
+                        <div class="Formulario">
+                            <label for="mensaje">¿Cómo puedo ayudarte?</label>
+                            <textarea id="mensaje" name="mensaje"></textarea>
+                            <div id="errorMensaje" class="error"></div>
+                        </div>
+                        <button type="submit">ENVIAR</button>
+                    </form>
+                    </form>
+
+                </section>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div>
+            <p>Josue Leon - Desarrollador Junior</p>
+        </div>
+        <div>
+            <p>@2024 Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+</body>
+
 </html>

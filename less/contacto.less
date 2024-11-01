@@ -1,0 +1,116 @@
+.Contacto {
+    position: relative;
+    flex: 1;
+
+
+    .itemSection {
+        display: flex;
+        justify-content: center;
+
+        .Titulos {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+
+            img {
+                height: 48px;
+                width: auto;
+                margin: 10px;
+            }
+
+            div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: auto;
+            }
+        }
+    }
+
+    .Container {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+
+        .Contactame {
+            text-align: center;
+            margin: auto;
+            padding: 20px;
+
+            p {
+                margin: 5px 0;
+                font-size: 18px;
+
+                &:last-of-type {
+                    transform: scale(1.05);
+                }
+            }
+
+            .formContacto {
+                button {
+                    background-color: @primary-background-color;
+                    color: @primary-text-color;
+                    border: none;
+                    padding: 10px 20px;
+                    font-size: 16px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+                    border-radius: 5px;
+
+                    &:hover{
+                        background-color: @secondary-background-color;
+                    }
+                }
+
+                .row {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    gap: 50px;
+                }
+
+                .Formulario {
+                    flex: 1;
+                    position: relative;
+
+                    .error {
+                        top: 100%;
+                        left: 0;
+                        width: 100%;
+                    }
+
+                    label {
+                        display: block;
+                        font-size: 18px;
+                        margin-bottom: 10px;
+                    }
+
+                    input[type="text"],
+                    input[type="email"],
+                    textarea {
+                        width: calc(100% - 20px);
+                        padding: 10px;
+                        font-size: 16px;
+                        border: none;
+                        border-bottom: 2px solid black;
+                        outline: none;
+                        margin-bottom: 20px;
+                        font-family: Arial, sans-serif;
+                        background: none;
+                    }
+
+                    textarea {
+                        height: 100px;
+                        resize: none;
+                    }
+                }
+            }
+        }
+    }
+}

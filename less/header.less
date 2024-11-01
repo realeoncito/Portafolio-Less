@@ -1,0 +1,47 @@
+header{
+    background-color: @primary-background-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    div h1{
+        display: flex;
+        align-self: center;
+        color: @primary-text-color;
+        padding: 0.5rem 0 0.5rem 0.6rem;
+        margin-bottom: 0.5rem;
+    }
+
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        ul {
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+
+            li a{
+                padding: 1.3rem 1rem;
+                text-decoration: none;
+                color: @primary-text-color;
+                display: inline-block;
+                transition: background-color 0.5s ease;
+
+                &:hover {
+                    background-color: @secondary-background-color;
+                }
+            }
+        }
+    }
+
+    @media(min-width: 768px){
+        flex-direction: row;
+        z-index: 90;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}
