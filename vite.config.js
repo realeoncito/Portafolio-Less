@@ -16,7 +16,8 @@ const getHtmlEntries = ()=>{
 export default defineConfig(
     {
         appType: 'mpa',
-        base: "/PortafolioLess/PortafolioJLA/",
+        /*Agreagr carpeta raiz de github para desplegar los css */
+        base: "/Portafolio-Less/",
         build: {
             rollupOptions: {
                 input: getHtmlEntries()
